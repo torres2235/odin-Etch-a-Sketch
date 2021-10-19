@@ -27,3 +27,7 @@ body {
     flex-direction: row;
     justify-content: space-evenly;
 }
+
+button {
+    margin-bottom: 20px;
+}

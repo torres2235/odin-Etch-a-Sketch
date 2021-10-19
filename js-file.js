@@ -25,6 +25,18 @@ square.addEventListener("mouseover", function(e) {
     
 });
 
+//this function clears the canvas back to white
+let clearButton = document.getElementById('clearButton');
+clearButton.addEventListener("click", function(e){
+    //creates an array of each div in the container
+    let children = document.getElementById("container").getElementsByTagName("*");
+
+    //cycles through each div
+    for( var i = 0; i<children.length; i++){ 
+        children[i].style.backgroundColor = "white";
+    }
+});
+
 //these two functions toggle if the the grids change to black or a random color
 let blackButton = document.getElementById('blackButton');
 blackButton.addEventListener("click", function(e){
