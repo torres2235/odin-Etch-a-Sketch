@@ -9,9 +9,7 @@ body {
     background-color: white;
     width: 25px;
     height: 25px;
-
-    border: 1px, solid blue;
-    /*box-sizing: border-box;*/
+    box-sizing: border-box;
 }
 
 #container {

@@ -11,3 +11,8 @@ function addElement() {
         document.getElementById('container').appendChild(newDiv);
     }
 }
+
+let square = document.getElementById('container');
+square.addEventListener("mouseover", function(e) {
+    e.target.style.backgroundColor = "black";
+});
