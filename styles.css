@@ -19,4 +19,11 @@ body {
     width: 400px;
     height: 400px;
     
+    margin-bottom: 20px;
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
