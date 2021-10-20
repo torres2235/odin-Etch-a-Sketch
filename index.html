@@ -12,11 +12,22 @@
 <body>
     <h1>Etch-a-Sketch</h1>
 
-    <button id = "clearButton">Clear</button>
+    <div id = "topButtons">
+        <button id = "clearButton">Clear</button>
+
+        <form>
+            <label for="resize">Input size from 1-64:</label><br>
+            <input type="text" id="resize" name="resize"><br>
+        </form> 
+        
+        <button id = "sizeButton">Resize</button>
+
+    </div>
+    
 
     <div id = "container"></div>
 
-    <div id = "buttons">
+    <div id = "bottomButtons">
         <button id = "blackButton">Black</button>
         <button id = "colorButton">Color</button>
     </div>

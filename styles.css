@@ -7,8 +7,6 @@ body {
 
 .square {
     background-color: white;
-    width: 25px;
-    height: 25px;
     box-sizing: border-box;
 }
 
@@ -22,7 +20,8 @@ body {
     margin-bottom: 20px;
 }
 
-#buttons {
+#bottomButtons,
+#bottomButtons {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -31,3 +30,4 @@ body {
 button {
     margin-bottom: 20px;
 }
+

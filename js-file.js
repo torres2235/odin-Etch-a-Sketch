@@ -1,12 +1,19 @@
-document.body.onload = addElement;
+document.body.onload = addElement(16);
 
 //adds our divs into our grid
-function addElement() {
-    for(i=0; i < 256; i++) {
-        let newDiv = document.createElement('div');
-        newDiv.className = "square";
+function addElement(x = 16) {
 
-        //newDiv.innerText = ".";
+    let totalSquares = x * x;
+
+    let totalPixels = 160000;
+
+    let box = Math.sqrt(totalPixels / totalSquares); //gives us what we should set our length and width of each box
+
+    for(i=0; i < totalSquares; i++) {
+        let newDiv = document.createElement('div');
+        newDiv.style.width = box + "px";
+        newDiv.style.height = box + "px";
+        newDiv.className = "square";
 
         document.getElementById('container').appendChild(newDiv);
     }
@@ -57,3 +64,17 @@ function getColor() {
   return `rgb(${getRandomColor()}, ${getRandomColor()}, ${getRandomColor()})`;
 }
 //-----------------------------------------------------------------
+
+//resizes our grid
+let sizeButton = document.getElementById('sizeButton');
+sizeButton.addEventListener("click", function(e){
+    //creates an array of each div in the container
+    let children = document.getElementById("container").getElementsByTagName("*");
+
+    //cycles through each div
+    for( var i = 0; i<children.length;){ 
+        children[i].remove();
+    }
+
+
+});
