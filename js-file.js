@@ -66,8 +66,12 @@ function getColor() {
 //-----------------------------------------------------------------
 
 //resizes our grid
-let sizeButton = document.getElementById('sizeButton');
-sizeButton.addEventListener("click", function(e){
+let form = document.getElementById('form');
+
+form.addEventListener("submit", function(e){
+
+    e.preventDefault(); //prevents autosubmiting
+
     //creates an array of each div in the container
     let children = document.getElementById("container").getElementsByTagName("*");
 
@@ -76,5 +80,13 @@ sizeButton.addEventListener("click", function(e){
         children[i].remove();
     }
 
+    let resize = document.getElementById('resize').value
 
+    if(resize <= 64) {
+        addElement(resize);
+    } else {
+        alert("Invalid size");
+        addElement(16);
+    }
+    
 });
